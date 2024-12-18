@@ -57,10 +57,10 @@ class ImeActivity : AppCompatActivity() {
                     Log.d(TAG, "onProgress: ${imeAnimation.interpolatedFraction}")
                     if (imeVisible) {
                         binding.editText.translationY =
-                            -(imeHeight - binding.main.paddingBottom) * imeAnimation.interpolatedFraction
+                            (-imeHeight * imeAnimation.interpolatedFraction + binding.main.paddingBottom).coerceAtMost(0f)
                     } else {
                         binding.editText.translationY =
-                            -(imeHeight - binding.main.paddingBottom) * (1 - imeAnimation.interpolatedFraction)
+                            (-imeHeight * (1 - imeAnimation.interpolatedFraction) + binding.main.paddingBottom ).coerceAtMost(0f)
                     }
                     return insets
                 }

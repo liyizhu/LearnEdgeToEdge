@@ -6,7 +6,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.learnedgetoedge.R
 import com.example.learnedgetoedge.databinding.ActivityImeOldBinding
 import com.example.learnedgetoedge.utils.KeyBoardStatePopupWindow
 import com.example.learnedgetoedge.utils.PxUtil
